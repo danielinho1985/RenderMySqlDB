@@ -8,7 +8,7 @@ ENV MYSQL_PASSWORD=app_password_456
 
 # Simple health check that actually tests MySQL
 HEALTHCHECK --interval=30s --timeout=3s \
-  CND mysqladmin ping -h localhost -u root -p${MYSQL_ROOT_PASSWORD} || exit 1
+  CMD mysqladmin ping -h localhost -u root -p${MYSQL_ROOT_PASSWORD} || exit 1
 
 # Just start MySQL normally
 CMD ["docker-entrypoint.sh", "mysqld"]
