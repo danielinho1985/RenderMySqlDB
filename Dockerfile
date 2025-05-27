@@ -1,5 +1,4 @@
-# Dockerfile
-FROM mcr.microsoft.com/mssql/server:2019-latest
+FROM --platform=linux/amd64 mcr.microsoft.com/mssql/server:2019-latest
 ENV ACCEPT_EULA=Y
 ENV SA_PASSWORD=YourStrong@Passw0rd
 EXPOSE 1433
